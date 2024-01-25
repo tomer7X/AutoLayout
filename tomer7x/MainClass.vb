@@ -21,12 +21,6 @@ Namespace MyNamespace
         End Sub
         <CommandMethod("MAT-TO-LAYOUT")>
         Public Shared Sub MatrixToLayout()
-            'Dim endDate As New DateTime(2023, 8, 15)
-            'Dim currentDate As DateTime = DateTime.Now.Date
-            'If currentDate > endDate Then
-            'MessageBox.Show("it looks like you need to call tomer.")
-            'Return
-            'End If
             Const VPCenterX As Double = 210.6893
             Const VPCenterY As Double = 172.6984
             Const VPCenterZ As Double = 0
