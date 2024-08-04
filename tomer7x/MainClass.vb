@@ -249,7 +249,6 @@ Namespace MyNamespace
                             End With
 
                             LayoutList = LayoutsClass.GetLayoutList()
-
                             If LayoutList.Contains(NameValue) Then
                                 Throw New Exception(ErrorStatus.AlreadyInGroup, $"Layout {NameValue} already exists!")
                                 Exit For
@@ -291,6 +290,9 @@ Namespace MyNamespace
                             End If
                             LayoutManager.Current.CurrentLayout = "Model"
                             LayoutCount += 1
+                            If LengthValue <> 5 And WidthValue <> 5 Then
+                                Console.WriteLine("need to make 5 into the real dim")
+                            End If
                             Writer.WriteLine($"{PageNumber},{NameValue},{LengthValue},{WidthValue},{QuantityValue}")
                             dxfDoc.Save($"{DrawingPath}{NameValue}.dxf")
                         Next
